@@ -1,0 +1,42 @@
+Z=1⇒Goto 1
+Z=2⇒Goto 2
+Lbl 1
+If Y>0
+Then Locate 4,4,Y
+Locate 4,3,Y
+Locate 4,3,"       "
+Locate 4,5,Y
+Locate 2,4,"         "
+For 1→Z To 100
+Next
+N−Y→N
+Return
+Else Locate 3,5,"M  I  S  S"
+Locate 3,5,"M I S S   "
+Locate 3,5,"MISS   "
+For 1→Z To 100
+Next
+Locate 3,5," IS "
+Locate 4,5,"  "
+Return
+IfEnd
+Lbl 2
+If Y>0
+Then Locate 15,4,Y
+Locate 15,3,Y
+Locate 15,3,"       "
+Locate 15,5,Y
+Locate 15,4,"       "
+For 1→Z To 100
+Next
+A−Y→A
+Return
+Else Locate 9,5,"M  I  S  S"
+Locate 9,5,"   M I S S"
+Locate 12,5,"   MISS"
+For 1→Z To 100
+Next
+Locate 15,5," IS "
+Locate 16,5,"  "
+Return
+IfEnd

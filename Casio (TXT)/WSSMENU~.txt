@@ -1,0 +1,29 @@
+Lbl 0
+Locate 1,1,"STATUS]"
+For 8→Z To 21
+Locate Z,1,"−"
+Next
+For 2→Z To 7
+Locate 1,Z,"[                   ]"
+Next
+Lbl 1
+Locate 1,1,"STATUS]−−−−−−−−−−−−−−"
+Locate 2,2,"HP:      /         "
+Locate 5,2,A
+Locate 12,2,B
+Locate 2,3,"MP:      /         "
+Locate 5,3,C
+Locate 12,3,D
+Locate 2,4,"LV:                "
+Locate 5,4,G
+Locate 2,5,"XP:      /         "
+Locate 5,5,E
+Locate 12,5,F
+Locate 2,6,"SPEED:             "
+Locate 8,6,H
+Locate 2,7,"PUSH SHIFT TO REST "
+Prog "PAUSEθ"
+r=47⇒Return
+r=78⇒B→A
+r=78⇒D→C
+Goto 1

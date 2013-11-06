@@ -1,0 +1,5 @@
+0→r
+While r=0
+Getkey→r
+WhileEnd
+Return

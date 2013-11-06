@@ -1,0 +1,81 @@
+1→F Start
+Lbl 0
+ClrText
+Locate 1,1,"TOURNAMENT MODE]−−−−−"
+Locate 1,2,"F1)CHARACTER STATUS ]"
+Locate 1,3,"F2)MAGIC SPELLS     ]"
+Locate 1,4,"F3)LEVEL:           ]"
+If F Start=-1
+Then Locate 11,4,"TO DEATH"
+Else Locate 11,4,F Start
+IfEnd
+Locate 1,5,"F4)RULES            ]"
+Locate 1,6,"F5)BACK OUT         ]"
+Locate 1,7,"F6)GO!!!            ]"
+Prog "PAUSEθ"
+r=47 Or r=39⇒0→F Start
+r=47 Or r=39⇒Return
+r=79⇒Prog "WSSMENU~"
+r=69⇒Prog "WSSM~"
+r=59⇒Goto D
+r=49⇒Goto R
+r=39⇒Goto G
+Goto 0
+Lbl D
+ClrText
+"CHANGE TO...(1~1000)"
+"-1=TO DEATH"
+?→F Start
+F Start<-1⇒1→F Start
+F Start>1000⇒1000→F Start
+Goto 0
+Lbl R
+ClrText
+"COMPETETION RULES"
+"−−−−−−−−−−−−−−−−−"
+"FIGHT 10 BATTLES."
+"YOU WILL GAIN XP,"
+"BUT NO MAGIC."¬ //This is the little pause triangle.
+Goto 0
+Lbl G
+1→F End
+Do
+For 1→Y To 3
+For 1→Z To 7
+Locate 1,Z,"−−−−−−−−−−−−−−−−−−−−−"
+Locate 8,4,"ROUND"
+Locate 14,4,F End
+Next
+For 1→Z To 7
+Locate 1,Z,"                     "
+0→F pitch
+F Start=-1⇒-1→F pitch
+F Start≠-1⇒Locate 8,4, "ROUND"
+F Start≠-1⇒Locate 14,4,F End
+Next
+Next
+F pitch=-1⇒F End→F Start
+Prog "WSBAT~"
+F pitch =-1⇒F pitch→F Start
+A≤0⇒Goto Z
+F End+1→F End
+LpWhile F End≤10
+ClrText
+Locate 8,4,"YOU WIN"
+Prog "PAUSEθ"
+Lbl 9
+1→Y
+Prog "WSDISK2~"
+Return
+Lbl Z
+If F Start=-1
+Then B→A
+D→C
+Goto 9
+IfEnd
+ClrText
+Locate 7,3,"GAME OVER"
+Locate 8,5,"LOSER!!"
+Prog "PAUSEθ"
+0→F Start
+Return

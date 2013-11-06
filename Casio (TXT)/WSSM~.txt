@@ -1,0 +1,81 @@
+N=0⇒Goto M
+For 6→Z To 1 Step -1
+Locate 8,Z,"[MAGIC]"
+Locate 8,Z+1,"       "
+Next
+Lbl M
+For 8→Z To 1 Step -1
+Locate Z,1,"MAGIC] "
+Next
+For 7→Z To 21
+Locate Z,1,"−"
+Next
+Locate 7,1,"−−−−−−(M[     ]"
+N>0⇒Locate 7,1"(H[   ]"
+N>0⇒Locate 10,1,Int ((A÷B)×100)
+Locate 16,1,C
+1→b₁
+1→b₂
+Lbl 0
+b₁=1⇒Locate 1,2,"LIGHT MAGIC]−−−−−−−--"
+b₁=2⇒Locate 1,2,"DARK MAGIC]-−−−−−−−--"
+b₁=3⇒Locate 1,2,"ELEMENTAL MAGIC]−−−--"
+b₁=4⇒Locate 1,2,"SWORD TECHS]−−−−−−−--"
+b₁=5⇒Locate 1,2,"FORBIDDEN MAGIC]−−−--"
+N>0⇒Locate 17,2,"[SEL "
+For 3→Z To 7
+Locate 1,Z,"[                   ]"
+Next
+N>0⇒Locate 21,2,b₂
+Locate 21,2,b₂
+If b₁=1
+Then I≥1⇒Locate 3,3,"1)CURE       1 MP"
+I≥2⇒Locate 3,4,"2)CURA      10 MP"
+I≥3⇒Locate 3,5,"3)CURAGA    22 MP"
+I≥4⇒Locate 3,6,"4)CURAJA    45 MP"
+I≥5⇒Locate 3,7,"5)HOLY      80 MP"
+IfEnd
+If b₁=2
+Then J≥1⇒Locate 3,3,"1)THUNDER    5 MP"
+J≥2⇒Locate 3,4,"2)FIRE      15 MP"
+J≥3⇒Locate 3,5,"3)BLIZZARD  30 MP"
+J≥4⇒Locate 3,6,"4)OSMOSE     0 MP"
+J≥5⇒Locate 3,7,"5)SHADOW    84 MP"
+IfEnd
+If b₁=3
+Then K≥1⇒Locate 2,3,"1)SOLAR FLARE 50 MP"
+K≥2⇒Locate 2,4,"2)ARTIC FLOOD 60 MP"
+K≥3⇒Locate 2,5,"3)ION STORM   70 MP"
+K≥4⇒Locate 2,6,"4)CHASM       80 MP"
+K≥5⇒Locate 2,7,"5)STAR        99 MP"
+IfEnd
+If b₁=4
+Then L≥1⇒Locate 2,3,"1)PAYBACK    10→ MP"
+L≥2⇒Locate 2,4,"2)LUNAR STAB 20→ MP"
+L≥3⇒Locate 2,5,"3)COMET DASH 30→ MP"
+L≥4⇒Locate 2,6,"4)−−−−−−−−−−−−−−−−−"
+L≥5⇒Locate 2,7,"5)FURK ATTK  ??→ MP"
+IfEnd
+If b₁=5
+Then M≥1⇒Locate 2,3,"1)ICE ARROWS  2+ MP"
+M≥2⇒Locate 2,4,"2)DARK CAKE   32 MP"
+M≥3⇒Locate 2,5,"3)STRLT BRKR  50 MP"
+M≥4⇒Locate 2,6,"4)PHOENIX    100 MP"
+M≥5⇒Locate 2,7,"5)COMET RAIN   1 MP"
+IfEnd
+Prog "PAUSEθ"
+r=47⇒0→b₁
+r=47⇒0→b₂
+r=47⇒Return
+r=79⇒I>0⇒1→b₁
+r=69⇒J>0⇒2→b₁
+r=59⇒K>0⇒3→b₁
+r=49⇒L>0⇒4→b₁
+r=39⇒M>0⇒5→b₁
+r=72⇒1→b₂
+r=62⇒2→b₂
+r=52⇒3→b₂
+r=73⇒4→b₂
+r=63⇒5→b₂
+r=78⇒Return
+Goto 0

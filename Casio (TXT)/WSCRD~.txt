@@ -1,0 +1,68 @@
+ClrText
+Locate 4,4,"A"
+Locate 19,4,"π"
+Locate 1,7,"I CANNOT BE KILLED!!!"
+For 1→Z To 200
+Next
+Locate 1,7,"OH, YEAH???          "
+For 1→Z To 200
+Next
+Locate 1,7,"                     "
+For 1→Z To 10
+Locate 17,4,"×−π "
+Locate 17,4," +π "
+Locate 17,4," −× "
+Locate 17,4," −π+"
+Locate 17,4," −× "
+Locate 17,4," +π "
+Next
+For 1→Z To 20
+Locate 17,4," +"
+Locate 17,4," ×"
+Next
+Locate 1,7,"COMET DASH!!!!!!"
+For 19→Z To 1 Step -1
+Locate Z,4,"(====−−−−---- "
+Locate 1,4,"====−−−−---- "
+Locate 1,4,"===−−−−---- "
+Locate 1,4,"==−−−−---- "
+Locate 1,4,"=−−−−---- "
+Locate 1,4,"−−−−---- "
+Locate 1,4,"−−−---- "
+Locate 1,4,"−−---- "
+Locate 1,4,"−---- "
+Locate 1,4,"---- "
+Locate 1,4,"---A"
+Locate 1,4,"-- "
+Locate 1,4,"- "
+Locate 1,4," "
+Locate 1,7,"NNNNNNNNOOOOOOO!!!!!!"
+4→Y
+For 4→Z To 7
+Locate 4,Z,"!"
+Locate 4,Y,"!"
+Locate Z,4,"−"
+Locate Y,4,"−"
+Y−1→Y
+Next
+ClrText
+For 1→Z To 500
+Next
+Locate 1,1,"WIZARD"
+Locate 17,7,"SPELL"
+Locate 7,3,"PROGRAMMER"
+Locate 6,5,"JEREMIAH C. "
+Prog "WAITθ"
+Locate 7,3,"SPELL DESIGNER"
+Locate 6,5,"DAN LARSON  "
+Prog "WAITθ"
+Locate 7,3,"DIALOG/STORY  "
+Locate 6,5,"JEREMIAH C. "
+Prog "WAITθ"
+Locate 7,3,"THANK YOU     "
+Locate 6,5,"FOR PLAYING!!"
+Prog "WAITθ"
+Locate 7,3,"  THE    "
+Locate 6,5,"  END        "
+0→A
+Return

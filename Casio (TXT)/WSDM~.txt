@@ -1,0 +1,25 @@
+For 16→Z To 1 Step -1
+Locate Z,1,"[DISK]−"
+Next
+Locate 1,1,"DISK]−"
+For 2→Z To 7
+Locate 1,Z,"[                   ]"
+Next
+Locate 2,2,"F1)SAVE"
+Locate 2,7,"F6)END GAME"
+Lbl 0
+Prog "PAUSEθ"
+r=47⇒Return
+r=79⇒Goto 1
+r=29⇒Goto 2
+Goto 0
+Lbl 1
+1→Y
+For 7→Z To 2 Step -1
+Locate 1,Z,"−−−−−−−−−−−−−−−−−−−−"
+Next
+Prog "WSDISK3~"
+Return
+Lbl 2
+0→A
+Return

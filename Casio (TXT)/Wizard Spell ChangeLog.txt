@@ -1,0 +1,63 @@
+Wizard Spell Changelog
+----------------------
+Version 0.9 r10 (2001.04.16)
+----------------------------
+Most things are done, need a couple more spells.
+BUG: When [Payback] deals it's damage, the damage is a single instead of a long (3.14 instead of 3). This bug also causes the XP value to become a single.
+BUG: [Fire], [Ice], and [Lit], does piddily amounts of damage. (i.e. 3 max at level 50)
+BUG: [Cure], [Cure 2], and [Cure 3] does crap for healing. The amount is based on the percentage of the MAX HP. This needs to be fixed.
+
+
+Version 0.91 (2009.03.26)
+-------------------------
+HOLY SHIT! It's been a long time.
+
+Main Program
+ FIX: Added a ClrText to the end of the code so when the user pushes -EXIT- the screen clears and "Done" is displayed on the screen instead of it adding 47 to the screen of text. (47 is -EXIT-'s keycode).
+ 
+Program Modules
+ FIX: Changed order around for battle checking on the map to keep it from entering battle when leaving the camp screen
+ FIX: [Payback]'s damage is now a long
+ FIX: Title Menu (WSMENU~) is now flicker-free
+ MOVE: [Comet Dash] was moved from {Forbidden Magic} to {Sword Techs}. The Animation code was moved to the correct module as well.
+ CHANGE: Removed "SPELL NOT LEARNED" from WSSM~ in favor for a blank line.
+ CHANGE: Renamed the following:
+    {White Class} --> {Light Magic}
+        [Cure 2] --> [Cura]
+        [Cure 3] --> [Curaga]
+        [Cure 4] --> [Curaja]
+        [White] --> [Holy]
+    {Black Class} --> {Dark Magic}
+        [Lit] --> [Thunder]
+        [Ice] --> [Blizzard]
+        [Drain] --> [Osmose]
+        [Black] --> [Shadow]
+    {Element Class} --> {Elemental Magic}
+    {Tech Class} --> {Sword Techs}
+ ADD: [Strlt Brkr] (Starlight Breaker) replaced [Comet Dash] in the {Forbidden Magic} List. This spell costs 500 MP and does three TIMES the damage of [Dark Cake]. Also, this is the FIRST spell that has a finishing animation AFTER the damage is dealt.
+ ADD: Master camp menu to centralize the three camp screens. This is in preparation of a master camp system. This is accessed by pressing -MENU- on the map screen. the old -F1- to -F3- buttons were moved to the new camp module (WSCAMP~)
+ REMOVE: Scrolling page animation from WSEXP~ at level up
+
+ System Functions
+  STARENDθ
+   OMG! First ever update since program's creation in 1999!
+   FIX: When "StarEnd" was going through the animated erase, the word was capitalized instead of the proper formatting.
+   UPDATE: Changed the word "SOFTWARE" to "ENTERTAINMENT" to reflect this change of StarEnd back in 2005. Also, the Animated display and erasure of the new word was changed to a [Comet Dash] animation for the display and only an altered line erasure from the old word.
+   FIX: Animation code was optimized slightly. Mostly for the new "ENTERTAINMENT" animations and the fixed "StarEnd" erasure animation.
+
+
+Version 0.93 (2009.03.26)
+-------------------------
+ PROPOSED CHANGE: Increasing the MP cost of every spell. Considering that before the addition of [Starlight Breaker], the highest static MP cost is 100MP.([Fury Attack] doesn't count as it drops the player to about 1% HP/MP regardless of how much the player had.) This is proposed as around level 200 or so the player has a CRAPLOAD of MP (the max is 99999).
+ PROPOSED CHANGE: Changing [Ice Arrows] to just start automatically dumping MP until either the MP runs out or the player hits -SHIFT-/-F1- to stop.
+ ADD: New WSDISK version 3. Less flicker, more faster. Includes new Data Management system. Granted, all it is right now it's Delete only. Copy and Move are planned for version 3.1.
+ CHANGE: Row 1 in WSMAP~ is now a HUD for HP/MP. Also, the WSCAMP~ was moved to row 1 cause of this change. Animations in WSSMENU~, WSDM~, and WSSM~ were updated for this. This does reduce the size of the map, but oh well.
+ CHANGE: Disallowed access to magic class lists if player has no spells for that class. Also, if player has NO spells, then the entire magic screen is disabled. Also, if the player is on the map, the "SEL" indicator is removed.
+ CHANGE: Changed MP HUD in WSSM~ to show only the current MP value. Also, when in combat, the HP percentage is displayed.
+ FIX: Insta-kill enemies (enemies that got 0 on the HP roll) no longer exist. If 0 is rolled, then the 0 becomes a 1.
+ UPDATE: Changed the battle transition animation to be MUCH faster. (From 7~10 seconds to 0.5~1.5)
+ CHANGE: Biggest change ever! Updated WSBAT~'s interface. The following changes happened:
+    Removal of the enemy's HP value. The player cannot see the enemy's HP. However, this was kept in [Ice Arrows], but was relocated to Row 6.
+    Moved the player's HUD to Row 1. Row 6 is now a ground like line. The HUD is now designed like the one on in WSMAP~. HP/MP current values are shown.
+    Added new button shortcuts. -SHIFT- is now just like hitting -F1-, -ALPHA- is just like -F2-
+ CHANGE: Added "Data Manager" and "Game Manual" (Disabled) to WSMENU~'s "Story" mode.

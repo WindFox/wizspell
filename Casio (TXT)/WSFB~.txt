@@ -1,0 +1,28 @@
+ClrText
+"DAVID"
+" WHO ARE YOU?"¬
+ClrText
+"????"
+" I AM THE ESSENCE"
+"OF EVIL. I AM THE"
+"GOD OF DARKNESS."
+"I AM NARR!!!!!"¬
+ClrText
+"DAVID"
+" YOU NEED A"
+"STRAIGHT-JACKET."¬
+ClrText
+"NARR"
+" FOOL!"
+"NOW I SHAL KILL YOU"
+"AND MAKE YOUR POWER"
+"MY SLAVE!!!!"¬
+ClrText
+"DAVID"
+" I DON'T THINK SO..."¬
+ClrText
+Prog "WSBAT~"
+1→a₀
+A>0⇒Prog "WSCRD~"
+A>0⇒Stop
+Return

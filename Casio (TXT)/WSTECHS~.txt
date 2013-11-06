@@ -1,0 +1,96 @@
+b₁=-1⇒Goto A
+b₂=1⇒C≥10⇒L≥1⇒Goto 1
+b₂=2⇒C≥20⇒L≥2⇒Goto 2
+b₂=3⇒C≥30⇒L≥3⇒Goto 3
+b₂=4⇒C≥40⇒L≥4⇒Goto 4
+b₂=5⇒L=5⇒Goto 5
+Return
+Lbl 1
+C−10→C
+A−20→A
+S×2→S
+-1→b₁
+0→θ
+20→T
+Return
+Lbl A
+Int (θ×G)→Y
+1→Z
+Locate 19,3,"π"
+Locate 19,4," "
+Locate 19,2,"π"
+Locate 19,3," "
+Locate 19,2," "
+For 1→Z To 100
+Next
+Locate 2,4,"−−−"
+Locate 15,4,"π−"
+Prog "WSDMGθ"
+0→b₁
+Return
+Lbl 2
+For 18→Z To 4 Step -1
+Locate Z,4,"−π "
+Next
+For 4→Z To 1 Step -1
+Locate 4,Z,"−π"
+Locate 4,Z,"  "
+Next
+Locate 19,4,"π−"
+1→Z
+G×(Int (Ran#×50)+1)→Y
+Prog "WSDMGθ"
+C−20→C
+A−30→A
+Return
+Lbl 5
+Locate 1,7,"FURY ATTACK          "
+Locate 1,1,"CRITICAL CHAIN ×     "
+0→θ
+1→Z
+While θ≤20
+θ+1→θ
+Locate 17,1,θ
+Int (G×θ)→Y
+Prog "WSDMGθ"
+WhileEnd
+Int (A÷80)→A
+Int (C÷90)→C
+Return
+Lbl 3
+For 1→Y To 5
+For 17→Z To 20
+Locate 17,4," −π "
+Locate Z,4,"×"
+Locate Z,4,"+"
+Next
+For 20→Z To 17 Step -1
+Locate 17,4," −π "
+Locate Z,4,"×"
+Locate Z,4,"+"
+Next
+Next
+Locate 17,4," −π "
+For 1→Z To 10
+Locate 18,4,"+"
+Locate 18,4,"×"
+Next
+For 19→Z To 1 Step -1
+Locate Z,4,"(===−−−--- "
+Next
+Locate 1,4,"===−−−--- "
+Locate 1,4,"==−−−--- "
+Locate 1,4,"=−−−--- "
+Locate 1,4,"−−−--- "
+Locate 1,4,"−−--- "
+Locate 1,4,"−--- "
+Locate 1,4,"--- "
+Locate 1,4,"--A"
+Locate 1,4,"- "
+Locate 1,4," "
+G×(B−A)→Y
+1→Z
+Prog "WSDMGθ"
+C−30→C
+A−15→A
+Return

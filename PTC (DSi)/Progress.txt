@@ -1,0 +1,41 @@
+CASIO to PTC
+
+KeyCodes:
+79=F1	69=F2	59=F3	78=Shift	77=Alpha	48=Menu	47=Exit
+28=UP	27=RIGHT	38=LEFT	37=DOWN
+
+DS:
+UP=1
+DOWN=2
+LEFT=4
+RIGHT=8
+A=16
+B=32
+X=64
+Y=128
+L=256
+R=512
+START=1024
+
+BTN		MAP		BAT		CAMP
+-----------------------------
+A				F1		Shift
+B				F2		Exit
+X
+Y
+ST		MENU
+L+R				F3
+
+Notes:
+r = PKEY
+Int = FLOOR
+This software's program text editing function allows you to store a maximum of 100 characters per line, with a maximum of 9999 lines. However, when the memory allocated to saving text is exceeded, you will no longer be able to enter text. The maximum number of characters you can use in a program is approximately 520,000.
+
+Progress:
+WIZSPELL		done
+WAIT@			removed due to actual WAIT statement
+PAUSE@:@PAUSE	done
+WSMENU~:TITLE	done
+WSBAT~:BAT_		done
+WSEXP~:EXP_		inp
+WSDMG~:DMG_		inp

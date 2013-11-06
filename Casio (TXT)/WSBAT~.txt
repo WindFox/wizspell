@@ -1,0 +1,236 @@
+a0=21⇒a1=2⇒Goto 5
+F Start>0⇒Goto R
+6→Y
+For 3→Z To 7 Step 2
+Locate 1,Y,"---−−−−−−−−−−−−−−−---"
+Locate 1,Z,"---−−−−−−−−−−−−−−−---"
+Y−2→Y
+Y=0⇒2→Y
+Next
+a0=21⇒a1=7⇒Goto Q
+a0=1⇒a1=7⇒Goto Z
+Int (Ran#×5)×G→N
+N=0⇒1→N
+N→O
+Int (Ran#×5)×G→P
+P→Q
+G→R
+Int (Ran#×H)+1→S
+Int (Ran#×5)×G+1→V
+7→T
+7→U
+0→b₁
+0→b₂
+Goto 0
+Lbl R
+125×F Start→O
+45×F Start→Q
+13×F Start→R
+Int (Ran#×15)→S
+500×F Start→V
+O→N
+Q→P
+Goto 0
+Lbl Z
+4→Y
+For 4→Z To 7
+Locate 1,Z,"                     "
+Locate 1,Y,"                     "
+Y−1→Y
+Next
+1000000→N
+N→O
+1000000→P
+P→Q
+100→R
+12→S
+7→U
+1000000→V
+Goto 0
+Lbl 5
+1e+10→N~Q
+1000→R
+10→S
+7→U
+0→V
+Goto 0
+Lbl Q
+7→Y
+For 1→Z To 7
+Locate 1,Z,"   "
+Locate 4,Y,"   "
+Locate 7,Z,"   "
+Locate 10,Y,"   "
+Locate 13,Z,"   "
+Locate 16,Y,"   "
+Locate 19,Z,"   "
+Y−1→Y
+Next
+5000→N
+N→O
+7→T
+7→U
+7→S
+1000→P~Q
+50000→V
+25→R
+0→b1
+0→b2
+Lbl 0
+ClrText
+Locate 1,1,"(HP[     ]−MP[     ])"
+Locate 1,6,"---−−−−−−−−−−−−−−−−--"
+b1=0⇒Locate 1,7,"T/TB−[              ]"
+b1>0⇒Locate 1,7,"SPEL−<              >"
+b1=-1⇒Locate 1,7,"−−−−−[              ]"
+Locate 3,4,"A"
+Locate 19,4,"π"
+Locate 5,1,A
+Locate 15,1,C
+Lbl 1
+T<21⇒Locate T,7,"-"
+T=21⇒Locate 1,7,"F1)ATK][F2)MG][F3(RUN"
+T=21⇒I=0⇒J=0⇒K=0⇒L=0⇒M=0⇒Locate 8,7,"[−−−−−]"
+b1<0⇒T−1→T
+b1=0⇒T+H→T
+b1>0⇒T−(H÷2)→T
+If T≤6 And b1>0
+Then Prog "WSSPELL~"
+b1≠-1⇒7→T
+b1≠-1⇒0→b1
+0→b2
+C<0⇒A+C→A
+C<0⇒0→C
+Goto 0
+IfEnd
+If T=7 And b1<0
+Then Prog "WSTECHS~"
+7→T
+Int (S÷2)→S
+InEnd
+U+S→U
+0→r
+T>21⇒Getkey→r
+r=79 Or r=78⇒Goto P
+If r=69 Or r=77
+Then I>0 Or J>0 Or K>0 Or L>0 Or M>0⇒Prog "WSSM~"
+20→T
+Goto 0
+IfEnd
+r=59 Or r=47⇒Return
+T>21⇒21→T
+U>21⇒Goto E
+Goto 1
+Lbl E
+For 3→Z To 16
+Locate Z,4," A"
+Next
+Locate 18,4,"−"
+Locate 19,4,"/"
+Int ((Ran#×5)×(R÷2))→Y
+2→Z
+Ran#→θ
+θ>.7⇒0→Y
+Y=0⇒Locate 19,4,"/π"
+Prog "WSDMGθ"
+7→U
+Goto 0
+Lbl P
+Locate 1,7,"[ATTACK]−−−−−−−−−−−−−"
+For 18→Z To 5 Step -1
+Locate Z,4,"π "
+Next
+Locate 4,4,"−"
+9→a2
+1→b0
+Lbl C
+Locate 3,4,"/"
+Int (Ran#×10)→Z
+If Z≥a2
+Then Locate 1,1,"CRITICAL HIT!        "
+a2=8⇒Locate 10,1,"CHAIN!! ×"
+Locate 19,1,b0
+Int (Gxb0)→Y
+1→Z
+Prog "WSDMGθ"
+a2≥2⇒a2−1→a2
+b0+1→b0
+N≤0⇒Goto W
+Goto C
+Else Int ((Ran#×5)×(G÷2))→Y
+Ran#→θ
+θ>.7⇒0→Y
+Y=0⇒Locate 2,4,"A/"
+1→Z
+Prog "WSDMGθ"
+IfEnd
+7→T
+Goto 0
+Lbl L
+ClrText
+Locate 8,4,"YOU LOST."
+Prog "PAUSEθ"
+Return
+Lbl W
+Int (Ran#×50)→Y
+Lbl 9
+If F Start=0 And Y≤G And I+J+K+L+M<25
+Then Int (Ran#×5)→Z
+Z=0⇒I+1→I
+Z=1⇒J+1→J
+Z=2⇒K+1→K
+Z=3⇒L+1→L
+Z=4⇒M+1→M
+If I=6
+Then 5→I
+Goto 9
+IfEnd
+If J=6
+Then 5→J
+Goto 9
+IfEnd
+If K=6
+Then 5→K
+Goto 9
+IfEnd
+If L=6
+Then 5→L
+Goto 9
+IfEnd
+If M=6
+Then 5→M
+Goto 9
+IfEnd
+Locate 4,3,"×"
+Locate 2,5,"×"
+Locate 4,4,"×"
+Locate 2,4,"×"
+Locate 4,3," "
+Locate 2,5," "
+Locate 5,4,"×"
+Locate 2,3,"×"
+Locate 4,4," "
+Locate 2,4," "
+Locate 3,3,"×"
+Locate 3,5,"×"
+Locate 5,4," "
+Locate 2,3," "
+Locate 3,4,"×"
+Locate 3,3," "
+Locate 3,5," "
+Locate 3,4,"+"
+Locate 3,4,"÷"
+Locate 3,4,"−"
+For 3→Z To 18
+Locate Z,4,"−"
+Next
+Locate 2,3,"NEW SPELL LEARNED!!!!"
+Prog "WAITθ"
+IfEnd
+ClrText
+V−N→V
+Prog "WSEXP~"
+A>B⇒B→A
+C>D⇒D→C
+H>15⇒15→H
+Return

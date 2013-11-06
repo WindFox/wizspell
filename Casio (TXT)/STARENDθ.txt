@@ -1,0 +1,61 @@
+//Note:
+// This prgm uses both '-' and '(-)' keys.
+// Use the following guide:
+// "−" is '-' Key
+// "-" is '(-)' Key
+ClrText
+For 21→Z To 8 Step -1
+Locate Z,3,"S "
+Next
+For 21→Z To 9 Step -1
+Locate Z,3,"t "
+Next
+For 21→Z To 10 Step -1
+Locate Z,3,"a "
+Next
+For 21→Z To 11 Step -1
+Locate Z,3,"r "
+Next
+For 21→Z To 12 Step -1
+Locate Z,3,"E "
+Next
+For 21→Z To 13 Step -1
+Locate Z,3,"n "
+Next
+For 21→Z To 14 Step -1
+Locate Z,3,"d "
+Next
+For 21→Z To 1 Step -1
+Locate Z,5,"(===−−−--- "
+Z=1⇒Locate 11,5,"A"
+Z=2⇒Locate 12,5,"I"
+Z=3⇒Locate 13,5,"N"
+Z=4⇒Locate 14,5,"M"
+Z=5⇒Locate 15,5,"E"
+Z=6⇒Locate 16,5,"N"
+Z=7⇒Locate 17,5,"T"
+Next
+Locate 1,5,"===−−−---R"
+Locate 1,5,"==−−−---E"
+Locate 1,5,"=−−−---T"
+Locate 1,5,"−−−---N"
+Locate 1,5,"−−---E"
+Locate 1,5,"−--- "
+Locate 1,5,"--- "
+Locate 1,5,"-- "
+Locate 1,5,"- "
+Locate 1,5,- "
+For 1→Z To 200
+Next
+For 5→Z To 15
+Locate Z,5," -−"
+Next
+Locate 16,5," -"
+Locate 17,5," "
+Locate 8,3,"StarEnd"
+Locate 8,3,"xtxrxnx"
+Locate 8,3," +a+E+ "
+Locate 8,3,"  xrx  "
+Locate 8,3,"   +   "
+Locate 8,3,"       "
+Return

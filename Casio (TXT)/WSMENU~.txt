@@ -1,0 +1,103 @@
+Lbl Z
+1→N
+1→M
+ClrText
+Lbl 0
+0→F Start
+Locate 1,1,"-STORY-((××))-BATTLE-"
+Lbl 1
+M=0⇒1→M
+M=3⇒2→M
+If M=1
+Then Locate 1,1,"["
+Locate 7,1,"]"
+Locate 14,1,"-"
+Locate 21,1,"-"
+IfEnd
+If M=2
+Then Locate 14,1,"["
+Locate 21,1,"]"
+Locate 1,1,"-"
+Locate 7,1,"-"
+IfEnd
+If M=1
+Then Locate 2,2,"NEW STORY"
+Locate 2,3,"READ OLD STORY"
+Locate 2,4,"DATA MANAGER"
+Locate 2,5,"GAME MANUAL"
+IfEnd
+If M=2
+Then Locate 2,2,"1P COMBAT"
+Locate 2,3,"TOURNAMENT    "
+Locate 2,4,"              "
+Locate 2,5,"              "
+IfEnd
+Lbl 2
+N=0⇒1→N
+M=1⇒N=5⇒4→N
+M=2⇒N=3⇒2→N
+Locate 1,N+1,"{"
+Locate 21,N+1,"}"
+Prog "PAUSEθ"
+Locate 1,N+1," "
+Locate 21,N+1," "
+r=47⇒Return
+r=28⇒N-1→N
+r=27⇒M+1→M
+r=37⇒N+1→N
+r=38⇒M-1→M
+If r=78
+Then N=1⇒M=1⇒Goto N
+N=2⇒M=1⇒Goto L
+N=3⇒M=1⇒Goto S
+N=4⇒M=1⇒Goto H
+N=1⇒M=2⇒Goto D
+N=2⇒M=2⇒Goto T
+IfEnd
+r=28⇒Goto 2
+r=37⇒Goto 2
+Goto 1
+Lbl D
+5→B
+5→D
+5→O
+10→Q
+1→R
+1→G
+1→S
+1→H
+B→A
+D→C
+O→N
+Q→P
+0→X
+Prog "WSBAT~"
+Goto Z
+Lbl N
+5→A~D
+0→E
+10→F
+1→G
+1→H
+0→I~M
+//Prog "WSOPENS~" Prog removed
+Prog "WSMAP~"
+Goto Z
+Lbl L
+0→A
+2→Y
+Prog "WSDISK3~"
+A>0⇒Prog "WSMAP~"
+Goto Z
+Lbl T
+0→A
+2→Y
+Prog "WSDISK3~"
+A>0⇒Prog "WST~"
+Goto Z
+Lbl H
+Goto Z
+Lbl S
+3→Y
+Prog "WSDISK3~"
+Goto Z

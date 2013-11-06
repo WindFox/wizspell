@@ -1,0 +1,77 @@
+File3
+0→Z
+Lbl 0
+ClrText
+Locate 1,1,"DISK]−−−−])))))))))))"
+Y=1⇒Locate 6,1,"SAVE"
+Y=2⇒Locate 6,1,"LOAD"
+Locate 1,7,"(C)2000 StarEnd SOFT."
+Locate 1,2,"((−F1−−F2−×−F3−−F4−))"
+Z=1⇒Locate 3,2,"(F1)"
+Z=2⇒Locate 7,2,"(F2)"
+Z=3⇒Locate 12,2,"(F3)"
+Z=4⇒Locate 16,2,"(F4)"
+Locate 1,3,"[                   ]"
+Locate 1,4,"[      NO FILE      ]"
+Locate 1,5,"[     SELECTED!     ]"
+Locate 1,6,"[                   ]"
+Z=0⇒Goto C
+Goto 1
+Lbl C
+Z=1⇒List 1→List 5
+Z=2⇒List 2→List 5
+Z=3⇒List 3→List 5
+Z=4⇒List 4→List 5
+Locate 1,3,"[−−−−−       LV)    ]"
+Z=1⇒Locate 2,3,"File1"
+Z=2⇒Locate 2,3,"File2"
+Z=3⇒Locate 2,3,"File3"
+Z=4⇒Locate 2,3,"File4"
+Locate 16,3,List 5[7]
+Locate 1,4,"[HP)     /     −−−−−]"
+Locate 5,4,List 5[1]
+Locate 11,4,List 5[2]
+Locate 1,5,"[MP)     /     −−−−−]"
+Locate 5,5,List 5[3]
+Locate 11,5,List 5[4]
+Locate 1,6,"[XP)        /       ]"
+Locate 5,6,List 5[5]
+Locate 14,6,List 5[6]
+Y=1⇒Locate 1,7,"[ OVERWRITE?  (Y/N) ]"
+Y=2⇒Locate 1,7,"[ LOAD THIS?  (Y/N) ]"
+Goto I
+Lbl I
+Prog "PAUSEθ"
+r=47⇒Return
+r=32⇒Z≠0⇒Y=1⇒Goto S
+r=32⇒Z≠0⇒Y=2⇒Goto L
+0→Z
+r=79⇒1→Z
+r=69⇒2→Z
+r=59⇒3→Z
+r=49⇒4→Z
+Goto 0
+Lbl S
+{A,B,C,D,E,F,G,H,I,J,K,L,M,a₀,a₁}→List 5
+Z=1⇒List 5→List 1
+Z=2⇒List 5→List 2
+Z=3⇒List 5→List 3
+Z=4⇒List 5→List 4
+Return
+Lbl L
+List 5[1]→A
+List 5[2]→B
+List 5[3]→C
+List 5[4]→D
+List 5[5]→E
+List 5[6]→F
+List 5[7]→G
+List 5[8]→H
+List 5[9]→I
+List 5[10]→J
+List 5[11]→K
+List 5[12]→L
+List 5[13]→M
+List 5[14]→a₀
+List 5[15]→a₁
+Return

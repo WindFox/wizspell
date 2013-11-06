@@ -1,0 +1,30 @@
+Lbl 0
+ClrText
+a₀=0⇒1→a₀
+a₀=22⇒21→a₀
+a₁=1⇒2→a₁
+a₁=8⇒7→a₁
+Locate 1,1,"(HP[     ]−MP[     ])"
+Locate 5,1,A
+Locate 15,1,C
+Locate 21,7,"M"
+Locate a₀,a₁,"π"
+If a₀=21 And a₁=2
+Then Prog "WSFB~"
+IfEnd
+If a₀=21 And a₁=7
+Then Prog "WSBAT~"
+1→a₀
+1→a₁
+IfEnd
+Prog "PAUSEθ"
+r=28⇒a₁−1→a₁
+r=27⇒a₀+1→a₀
+r=37⇒a₁+1→a₁
+r=38⇒a₀−1→a₀
+r≠48⇒Int (Ran#×10)→Y
+r=48⇒Prog "WSCAMP~"
+Y≥8⇒Prog "WSBAT~"
+A≤0⇒Goto L
+Lbl L
+Return

@@ -1,0 +1,16 @@
+Lbl 0
+ClrText
+Locate a₀,a₁,"π"
+Locate 1,1,"[STATUS][MAGIC][DISK]"
+I=0⇒J=0⇒K=0⇒L=0⇒M=0⇒Locate 10,1,"−−−−−"
+Prog "PAUSEθ"
+r=47⇒Return
+If r=79 Or r=78
+Then Prog "WSSMENU~"
+IfEnd
+If r=69 Or r=77
+Then I>0 Or J>0 Or K>0 Or L>0 Or M>0⇒Prog "WSSM~"
+IfEnd
+r=59⇒Prog "WSDM~"
+A≤0⇒Return
+Goto 0

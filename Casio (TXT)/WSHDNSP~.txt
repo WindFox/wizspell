@@ -1,0 +1,161 @@
+b₂=1⇒C≥2⇒M≥1⇒Goto 1
+b₂=2⇒C≥32⇒M≥2⇒Goto 2
+b₂=3⇒C≥50⇒M≥3⇒Goto 3
+b₂=4⇒C≥100⇒M≥4⇒Goto 4
+b₂=5⇒C≥1⇒M=5⇒Goto 5
+Return
+Lbl 1
+Locate 18,1,"[−−−"
+Locate 1,1,"(MP−[     ]−−−−−)[-−-"
+Locate 1,7,"ICE ARROWS            "
+5→Y
+Lbl A
+θ<40⇒Int (Ran#×50)+1→θ
+Y=6⇒θ≥40⇒Return
+If θ≥40 And Y=5
+Then Locate 19,1,"HIT"
+0→Y
+IfEnd
+θ≥40⇒Y+1→Y
+0→r
+Getkey→r
+r≠0⇒θ<40⇒Return
+If r=78 And θ≥40
+Then For 18→Z To 3 Step -1
+Locate Z,4,"−"
+Next
+Locate 3,4,"A               "
+C−2→C
+G(Int (Ran#×50)+1)→Y
+1→Z
+Prog "WSDMGθ"
+1→Y
+For 5→Z To 2
+Locate 1,Z,"  A     "
+Next
+Locate 1,6,"EMY−[    /    ]−−−−"
+1→Y
+0→θ
+Locate 19,1,"−−−"
+IfEnd
+Locate 4,6,C
+Locate 12,6,D
+Locate 6,1,N
+C<2⇒Return
+Goto A
+Lbl 2
+For 1→Z To 2
+Locate 1,7,"WHOOP−DE−DO...       "
+For 1→Y To 200
+Next
+Locate 1,7,"                     "
+Next
+Locate 1,7,"LITTLE BOY THERE..."
+For 1→Y To 200
+Next
+Locate 1,7,"LITTLE GIRL THERE..."
+For 1→Y To 200
+Next
+Locate 1,7,"WHOOP−DE−DO!!!!!!!!!!"
+For 1→Z To 4
+Locate 1,Z,"×××××××××"
+Next
+Locate 15,3,"SPLAT!!"
+G(Int (Ran#×1500))+1→Y
+1→Z
+Prog "WSDMGθ"
+C−32→C
+Return
+Lbl 5
+Locate 1,7,"COMET RAIN           "
+0→Y
+1→Z
+For 1→W To 50
+(Int (Ran#×4))+1→θ
+For 2→X To 6
+Locate θ+1,X,"!"
+Locate θ+1,X−1," "
+Next
+Locate 3,4,"A"
+Y+(Int (Ran#×10000)+1)→Y
+Locate 20,7,50−W
+Next
+C−1→C
+Prog "WSDMGθ"
+Return
+Lbl 4
+For 18→Z To 1 Step -1
+Locate Z+3,1,"( "
+Locate Z+2,2,"( "
+Locate Z+1,3,"( "
+Locate Z,4,"( "
+Locate Z+1,5,"( "
+Locate Z+2,6,"( "
+Locate Z+3,7,"( "
+Next
+C−100→C
+Int (Ran#×G×H)→Y
+A+Y→A
+1→Z
+C−100→C
+Prog "WSDMGθ"
+Return
+Lbl 3
+Locate 18,4,"−π"
+Locate 1,7,"STARLIGHT...         "
+For 1→Z To 10
+Locate 17,4,"×"
+Locate 18,3,"/"
+Locate 16,5," "
+Locate 17,4,"+"
+Locate 18,3," "
+Locate 16,5,"/"
+Next
+For 1→Z To 10
+Locate 17,4,"O"
+Locate 18,3,"/"
+Locate 16,5," "
+Locate 18,3," "
+Locate 16,5,"/"
+Next
+Locate 16,5," "
+Locate 18,4," "
+Locate 20,3,"/"
+Locate 1,7,"BREAKER!!!           "
+Locate 20,3," "
+Locate 18,5,"/"
+Locate 16,4,"-"
+For 15→Z To 1 Step -1
+Locate Z,4,"-"
+Locate Z+1,4,"−"
+Next
+Locate 1,4,"−"
+For 1→Z To 5
+Next Z
+Locate 16,4,"("
+For 15→Z To 1 Step -1
+Locate Z,4,"("
+Locate Z+1,3,"−"
+Locate Z+1,5,"−"
+Next
+Locate 1,4," "
+Locate 1,3,"−"
+Locate 1,5,"−"
+1→Z
+G(Int (Rand#×4500))+1→Y
+Prog "WSDMGθ"
+C−500→C
+Locate 16,3," "
+Locate 16,4,"−"
+Locate 16,5," "
+For 15→Z To 1 Step -1
+Locate Z,4,"−"
+Locate Z,3," "
+Locate Z,5," "
+Next
+For 16→Z To 1 Step -1
+Locate Z,4,"- "
+Z≤4⇒Locate 5,4,"A"
+Next
+Locate 1,4," "
+Return

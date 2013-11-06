@@ -1,0 +1,129 @@
+For 1→Z To 10
+Locate 19,4,"×"
+Locate 19,4,"+"
+Next
+Locate 19,4,"π"
+b1=1⇒Goto 1
+b1=2⇒Goto 2
+b1=3⇒Goto 3
+b1=4⇒Goto 4
+b1=5⇒Goto 5
+Return
+Lbl 1
+If b2=1 And C≥1 And I≥1
+Then Locate 19,4,"*"
+Locate 18,3,"*"
+Locate 19,5,"*"
+A+Int (B÷8)→A
+B<A⇒B→A
+C−1→C
+Return
+IfEnd
+If b2=2 And C≥10 And I≥2
+Then Locate 18,4,"[π]"
+C−10→C
+A+Int (B÷4)→A
+B<A⇒B→A
+Return
+IfEnd
+If b2=3 And C≥22 And I≥3
+Then Locate 20,3,"/"
+Locate 19,4,"×"
+Locate 18,5,"/"
+A+Int (B÷2)→A
+C−27→C
+Return
+IfEnd
+If b2=4 And C≥45 And I≥4
+Then Locate 18,4,"(π)"
+B→A
+C−45→C
+Return
+IfEnd
+If b2=5 And C≥80 And I≥5
+Then 21→Y
+For 1→Z To 11
+Locate Y,2,"×"
+Locate Z,2,"×"
+Y−1→Y
+Next
+For 2→Z To 4
+Locate 3,Z,"×"
+Next
+N−Int (G×50)→Y
+1→Z
+Prog "WSDMGθ"
+C−80→C
+Return
+IfEnd
+Lbl 2
+If b2=1 And C≥5 And I≥1
+Then Locate 3,2,"××"
+Locate 2,3,"×  ×"
+Locate 3,4,"×"
+(Int (Ran#×G)+1)→Y
+1→Z
+Prog "WSDMGθ"
+C−5→C
+Return
+IfEnd
+If b2=2 And C≥15 And J≥2
+Then For 1→Z To 5
+For 2→Y To 5
+Locate Y,4," ×"
+Locate Y,3," ×"
+Locate 3,4,"A"
+Next
+For 5→Y To 2 Step -1
+Locate Y,4,"× "
+Locate Y,3,"× "
+Locate 3,4,"A"
+Next
+Next
+1→Z
+Int ((Ran#×G)×7)→Y
+Prog "WSDMGθ"
+C−15→C
+Return
+IfEnd
+If b2=3 And C≥30 And J≥3
+Then For 3→Z To 7
+Locate 3,Z,"!"
+Locate 2,Z−1,"!"
+Locate 4,Z−2,"!"
+Next
+1→Z
+G×(Int (Ran#×16))→Y
+C−30→C
+Prog "WSDMGθ"
+Return
+IfEnd
+If b2=4 And J≥4
+Then For 4→Z To 18
+Locate Z,4,")"
+Next
+Int (Ran#×G×2)+1→Z
+Q−Z→Q
+C+Z→C
+Return
+IfEnd
+If b2=5 And C≥84 And J≥5
+Then C-84→C
+For 1→Z To 7
+Locate 1,Z,"−−−−−−−−−−−−−−−−−−−−−"
+Next
+Int (Ran#×100)×500000→Y
+1→Z
+Prog "WSDMGθ"
+Return
+IfEnd
+Return
+Lbl 3
+Prog "WSMAXSP~"
+Return
+Lbl 4
+Prog "WSTECHS~"
+Return
+Lbl 5
+Prog "WSHDNSP~"
+Return

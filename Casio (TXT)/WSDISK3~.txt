@@ -1,0 +1,133 @@
+File3
+-1→Z
+ClrText
+Lbl 0
+Locate 1,1,"DISK]−−−−−−−−−−−−−---"
+Y=1⇒Locate 6,1,"SAVE]"
+Y=2⇒Locate 6,1,"LOAD]"
+Y=3⇒Locate 6,1,"MANAGE]"
+Z=-1⇒Goto 1
+For 2→X To 7
+Locate 1,X,"                    "
+Next
+Z>0⇒Goto 2
+Lbl 1
+0→Z
+Locate 1,2,"FILE 1)"
+Locate 1,3,"FILE 2)"
+Locate 1,4,"FILE 3)"
+Locate 1,5,"FILE 4)"
+Locate 1,7,"---−−−−−−−−−−−−−−−---"
+If List 4[7]=0
+Then Locate 8,2,"EMPTY"
+Else Locate 8,2,"LV−       SP−"
+Locate 11,2,List 4[7]
+List 4[9]+List 4[10]+List 4[11]+List 4[12]+List 4[13]→X
+Locate 20,2,X
+IfEnd
+If List 2[7]=0
+Then Locate 8,3,"EMPTY"
+Else Locate 8,3,"LV−       SP−"
+Locate 11,3,List 2[7]
+List 2[9]+List 2[10]+List 2[11]+List 2[12]+List 2[13]→X
+Locate 20,3,X
+IfEnd
+If List 3[7]=0
+Then Locate 8,4,"EMPTY"
+Else Locate 8,4,"LV−       SP−"
+Locate 11,4,List 3[7]
+List 3[9]+List 3[10]+List 3[11]+List 3[12]+List 3[13]→X
+Locate 20,4,X
+IfEnd
+If List 4[7]=0
+Then Locate 8,5,"EMPTY"
+Else Locate 8,5,"LV−       SP−"
+Locate 11,5,List 4[7]
+List 4[9]+List 4[10]+List 4[11]+List 4[12]+List 4[13]→X
+Locate 20,5,X
+IfEnd
+Prog "PAUSEθ"
+r=47⇒Return
+r=79⇒1→Z
+r=69⇒2→Z
+r=59⇒3→Z
+r=49⇒4→Z
+Z>0⇒Goto 0
+Goto 1
+Lbl 2
+Z=1⇒List 1→List 5
+Z=2⇒List 2→List 5
+Z=3⇒List 3→List 5
+Z=4⇒List 4→List 5
+If List 5[7]=0 And Y>1
+Then 0→Z
+Goto 0
+IfEnd
+Locate 1,2,"[FILE .     LV)     ]"
+Locate 7,2,Z
+Locate 16,2,List 5[7]
+Locate 1,3,"[HP)     /     −−−--]"
+Locate 5,3,List 5[1]
+Locate 11,3,List 5[2]
+Locate 1,4,"[MP)     /     −−−--]"
+Locate 5,4,List 5[3]
+Locate 11,4,List 5[4]
+Locate 1,5,"[XP)       /        ]"
+Locate 5,4,List 5[5]
+Locate 14,4,List 5[6]
+Locate 1,6,"[SPELLS)  /25−−−−−--]"
+List 5[9]+List 5[10]+List 5[11]+List 5[12]+List 5[13]→X
+Locate 9,6,X
+Y=1⇒Locate 1,7,"-−OVERWRITE?  (Y/N)−-"
+Y=2⇒Locate 1,7,"-−LOAD THIS?  (Y/N)−-"
+Y=3⇒Locate 1,7,"-−[F1)DELETE]−−−−−−−-"
+Prog "PAUSEθ"
+If r=47 Or r=64
+Then 0→Z
+Goto 0
+IfEnd
+If r=32 Or r=78
+Then Y=1⇒Goto S
+Y=2⇒Goto L
+IfEnd
+r=79⇒Y=3⇒Goto D
+Goto 2
+Lbl S
+{A,B,C,D,E,F,G,H,I,J,K,L,M,a₀,a₁}→List 5
+Z=1⇒List 5→List 1
+Z=2⇒List 5→List 2
+Z=3⇒List 5→List 3
+Z=4⇒List 5→List 4
+Return
+Lbl L
+List 5[1]→A
+List 5[2]→B
+List 5[3]→C
+List 5[4]→D
+List 5[5]→E
+List 5[6]→F
+List 5[7]→G
+List 5[8]→H
+List 5[9]→I
+List 5[10]→J
+List 5[11]→K
+List 5[12]→L
+List 5[13]→M
+List 5[14]→a₀
+List 5[15]→a₁
+Return
+Lbl D
+For 3→Y To 7
+Locate 1,Y,"[                   ]"
+Next
+Locate 3,3,"WARNING!!!"
+Locate 2,4,"IF YOU DELETE THIS"
+Locate 2,5,"DATA, YOU CANNOT"
+Locate 2,6,"GET IT BACK!! OK?"
+Locate 2,7,"F4)OK    ANY KEY)NO"
+Prog "PAUSEθ"
+r≠49⇒Goto 2
+0→A~M
+0→a₀
+0→a₁
+Goto S

@@ -1,0 +1,11 @@
+Prog "CASIO"
+Prog "STARENDθ"
+Locate 3,4,"STAREND SOFTWARE"
+Locate 3,5,"    PRESENTS"
+Prog "WAITθ"
+ClrText
+Locate 5,2,"WIZARD SPELL"
+Locate 7,7,"PRESS EXE"
+Prog "PAUSEθ"
+Prog "WSMENU~"
+ClrText

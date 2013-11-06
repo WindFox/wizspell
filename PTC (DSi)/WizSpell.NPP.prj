@@ -1,0 +1,36 @@
+<NotepadPlus>
+    <Project name="Wizard Spell">
+        <Folder name="PTC">
+            <File name="WIZSPELL.txt" />
+        </Folder>
+        <Folder name="CASIO">
+            <File name="Casio\CASIO.txt" />
+            <File name="Casio\PAUSE&#x03B8;.txt" />
+            <File name="Casio\STAREND&#x03B8;.txt" />
+            <File name="Casio\WAIT&#x03B8;.txt" />
+            <File name="Casio\WIZSPELL.txt" />
+            <File name="Casio\WSBAT~.txt" />
+            <File name="Casio\WSCAMP~.txt" />
+            <File name="Casio\WSCRD~.txt" />
+            <File name="Casio\WSDISK2~.txt" />
+            <File name="Casio\WSDISK3~.txt" />
+            <File name="Casio\WSDM~.txt" />
+            <File name="Casio\WSDMG&#x03B8;.txt" />
+            <File name="Casio\WSEXP~.txt" />
+            <File name="Casio\WSFB~.txt" />
+            <File name="Casio\WSHDNSP~.txt" />
+            <File name="Casio\WSMAP~.txt" />
+            <File name="Casio\WSMAXSP~.txt" />
+            <File name="Casio\WSMENU~.txt" />
+            <File name="Casio\WSSM~.txt" />
+            <File name="Casio\WSSMENU~.txt" />
+            <File name="Casio\WSSPELL~.txt" />
+            <File name="Casio\WST~.txt" />
+            <File name="Casio\WSTECHS~.txt" />
+        </Folder>
+        <Folder name="Notes">
+            <File name="Progress.txt" />
+            <File name="Casio\Wizard Spell ChangeLog.txt" />
+        </Folder>
+    </Project>
+</NotepadPlus>
