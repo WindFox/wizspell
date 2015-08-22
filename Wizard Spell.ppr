@@ -1,0 +1,56 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.HideOutput=0
+Compilator.ProgSaveAll=0
+Compilator.ProgRunSelection=0
+Compilator.LogType=0
+DefaultDir=C:\Users\windfox\Documents\Code\Casio\wizspell
+DefaultCPIndex=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+[Project tree]
+Wizard Spell
+	-Notes
+		Casio (TXT)\Wizard Spell ChangeLog.txt
+		README.md
+	-PTC Code
+		PTC (DSi)\WIZSPELL.txt
+	+Casio CFX Code
+		+Battle System
+			-Animations
+				Casio (TXT)\WSSPELL~.txt
+				Casio (TXT)\WSMAXSP~.txt
+				Casio (TXT)\WSTECHS~.txt
+				Casio (TXT)\WSHDNSP~.txt
+			Casio (TXT)\WSBAT~.txt
+			Casio (TXT)\WSDMG?.txt
+			Casio (TXT)\WSEXP~.txt
+		+Main Menu
+			Casio (TXT)\WSMENU~.txt
+			Casio (TXT)\WST~.txt
+		+Camp Menu
+			Casio (TXT)\WSCAMP~.txt
+			Casio (TXT)\WSSMENU~.txt
+			Casio (TXT)\WSSM~.txt
+			Casio (TXT)\WSDM~.txt
+		+Data Manager
+			Casio (TXT)\WSDISK2~.txt
+			Casio (TXT)\WSDISK3~.txt
+		+Support
+			Casio (TXT)\PAUSE?.txt
+			Casio (TXT)\WAIT?.txt
+		+Logos
+			Casio (TXT)\CASIO.txt
+			Casio (TXT)\STAREND?.txt
+		+Events
+			Casio (TXT)\WSFB~.txt
+			Casio (TXT)\WSCRD~.txt
+		Casio (TXT)\WSMAP~.txt
+		Casio (TXT)\WIZSPELL.txt
+[Open project files]
+[Selected Project Files]
+Main=

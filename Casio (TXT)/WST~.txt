@@ -56,7 +56,7 @@ Next
 Next
 F pitch=-1⇒F End→F Start
 Prog "WSBAT~"
-F pitch =-1⇒F pitch→F Start
+F pitch=-1⇒F pitch→F Start
 A≤0⇒Goto Z
 F End+1→F End
 LpWhile F End≤10
