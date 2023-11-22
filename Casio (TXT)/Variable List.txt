@@ -1,0 +1,46 @@
+Since the device has a set list of variables to work with, this list will help make sense of it when doing ports.
+The device treats all variables as a single character. This means that the F series at the bottom are not spelled out but selected with a menu.
+
+Var     | Description
+--------|--------------
+A       | Player HP Current
+B       | Player HP Max
+C       | Player MP Current
+D       | Player MP Max
+E       | Player XP
+F       | Player TNL
+G       | Player Level (Attack Strength)
+H       | Player Speed
+I       | Light Magic Level
+J       | Dark Magic Level
+K       | Elemental Magic Level
+L       | Sword Tech Level
+M       | Forbidden Magic Level / Title Menu X Coord
+N       | Enemy HP Current / Title Menu Y Coord
+O       | Enemy HP Max
+P       | Enemy ? Current
+Q       | Enemy ? Max
+R       | Enemy Level (Attack Strength)
+S       | Enemy Speed
+T       | Player ATB/CAST Timer
+U       | Enemy ATB Timer
+V       | Enemy XP Value?
+W       | Animation Loop Counter
+X       | Animation Loop Counter
+Y       | Buffer / Attack Damage Value
+Z       | Buffer
+r       | User Input
+a0      | Map X Coord
+a1      | Map Y Coord
+a2      | Crit Chance Value
+b0      | Crit Chain Level
+b1      | Menu Selector A / ATB/CAST Timer Switch (0=ATB, >0=CAST, -1=TECHCAST?)
+b2      | Menu Selector B
+F Start | Tourney Mode Flag (Enemy Level or Endless Mode)
+F End   | Current Tourney Round
+F Pitch | Tourney Endless Mode Buffer
+
+Y and Z are just buffer variables that do whatever is needed at the time.
+This includes the following:
+Animation Controller (Also tells WSDMG what side the animation should play)
+RNG (Z is for Crit in WSBAT)
